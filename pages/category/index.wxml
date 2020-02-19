@@ -1,0 +1,39 @@
+<view class="category">
+  <searchInput></searchInput>
+  <view class="content">
+    <scroll-view scroll-y class="scroll_left">
+      <view
+      class="left_content {{leftIndex === index? 'left_active':''}}"
+      wx:for="{{leftMeuList}}"
+      wx:key="*this"
+      bindtap="switchCategor"
+      data-index="{{index}}">
+        {{item}}
+      </view>
+    </scroll-view>
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y class="scroll_right">
+      <view
+      class="right_content"
+      wx:for="{{rigthClassList}}"
+      wx:for-item="item1"
+      wx:for-index="index1"
+      wx:key="cat_id">
+        <view class="title">★{{item1.cat_name}}★</view>
+        <view class="right_classify">
+          <navigator
+          class="right_classify_box"
+          wx:for="{{item1.children}}"
+          wx:for-item="item2"
+          wx:for-index="index2"
+          wx:key="cat_id"
+          url="/pages/goods_list/index?cid={{item2.cat_id}}">
+            <view class="img_box">
+              <image mode="widthFix" src="{{item2.cat_icon}}" />
+            </view>
+            <text>{{item2.cat_name}}</text>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

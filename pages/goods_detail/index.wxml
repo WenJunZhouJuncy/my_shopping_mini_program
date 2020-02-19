@@ -1,0 +1,54 @@
+<view class="goods_detail bg_gray">
+<view>{{shoppingCarData}}</view>
+  <swiper
+  class="bg_white"
+  autoplay
+  indicator-dots
+  circular
+  indicator-color="rgba(0, 0, 0, 0.3)"
+  indicator-active-color="#fff">
+    <swiper-item
+    wx:for="{{goodsDetailMsg.pics}}"
+    wx:key="pics_id"
+    bindtap="browse"
+    data-url="{{item.pics_big}}">
+      <image mode="widthFix" src="{{item.pics_big}}"/>
+    </swiper-item>
+  </swiper>
+  <!-- 商品价格 -->
+  <view class="goods_price bg_white">￥{{goodsDetailMsg.goods_price}}</view>
+  <!-- 商品标题 -->
+  <view class="info_box bg_white">
+    <view class="goods_name_box">
+      {{goodsDetailMsg.goods_name}}
+    </view>
+    <view class="collect_box">
+      <view class="iconfont icon-wujiaoxingkong"></view>
+      <view class="collect_txt">收藏</view>
+    </view>
+  </view>
+  <!-- 图文详情 -->
+  <view class="bg_white">
+    <view class="info_title">图文详情</view>
+    <rich-text nodes="{{goodsDetailMsg.goods_introduce}}"></rich-text>
+  </view>
+  <!-- 底部工具栏 -->
+  <view class="bottom_box bg_white">
+    <view class="three">
+      <view class="iconfont icon-kefu"></view>
+      <view>联系客服</view>
+      <button open-type="contact"></button>
+    </view>
+    <view class="three">
+      <view class="iconfont icon-fenxiang"></view>
+      <view>分享</view>
+      <button open-type="share"></button>
+    </view>
+    <navigator class="three" url="/pages/cart/index" open-type="switchTab">
+      <view class="iconfont icon-gouwuchedei"></view>
+      <view>购物车</view>
+    </navigator>
+    <view class="two join_car" bindtap="joinCar">加入购物车</view>
+    <view class="two now_buy">立即购买</view>
+  </view>
+</view>

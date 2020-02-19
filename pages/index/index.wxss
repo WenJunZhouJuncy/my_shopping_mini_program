@@ -1,0 +1,45 @@
+.home swiper{
+  width: 100%;
+  height: 340rpx;
+}
+
+.home .catitems_box{
+  display: flex;
+  background: #eee;
+  border-radius: 8rpx;
+}
+
+.home .catitems_box navigator{
+  padding: 25rpx;
+  flex: 1;
+  height: 205rpx;
+}
+
+.home .floor_box{
+  padding-top: 20rpx;
+}
+.home .floor_box .floor_title{
+  width: 100%;
+  height: 59rpx;
+}
+.home .floor_box .floor_list{
+  width: 100%;
+  overflow: hidden;
+}
+.home .floor_box .floor_list navigator{
+  width: 33.33%;
+  height: 415rpx;
+  float: left;
+}
+.home .floor_box .floor_list navigator:nth-last-child(-n+4){
+  border-left: 10rpx solid #fff;
+  height: 27.72vw;
+}
+.home .floor_box .floor_list navigator:nth-child(2),
+.home .floor_box .floor_list navigator:nth-child(3){
+  border-bottom: 10rpx solid #fff;
+}
+
+.home .floor_box .floor_list navigator image{
+  height: 100%;
+}

@@ -1,0 +1,38 @@
+<view class="pay">
+  <view class="site_info_box">
+    <view class="person_info_box">
+      <view class="name">{{siteInfo.userName}}</view>
+      <view class="phone">{{siteInfo.telNumber}}</view>
+    </view>
+    <view class="site_info">
+    {{siteInfo.provinceName}}
+    {{siteInfo.cityName}}
+    {{siteInfo.cityName}}
+    {{siteInfo.detailInfo}}
+    </view>
+  </view>
+  <view class="car_txt">购物车</view>
+  <view class="goods_list">
+    <view class="goods_item"
+    wx:for="{{carList}}"
+    wx:key="goods_id">
+      <view class="img_box">
+        <image mode="widthFix" src="{{item.goods_big_logo}}" />
+      </view>
+      <view class="info_box">
+        <view class="info">{{item.goods_name}}</view>
+        <view class="info_inner_box">
+          <view class="price">￥{{item.goods_price}}</view>
+          <view class="num">X{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="clearing_box bg_white">
+    <view class="clearing">
+      <view class="todle">合计:<text class="money">￥{{totalMoney}}</text></view>
+      <view>包含运费</view>
+    </view>
+    <view class="payment">支付({{totalNum}})</view>
+  </view>
+</view>

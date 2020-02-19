@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "SearchInput": "../../components/searchInput/index",
+    "Tabs": "../../components/tabs/index"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#eb4450",
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "商品列表"
+}

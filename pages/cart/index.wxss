@@ -1,0 +1,144 @@
+
+.cart{
+  padding: 15rpx 0 75rpx;
+}
+.cart .addsite{
+  width: 70%;
+  padding: 30rpx;
+  border: 2px #29b351 solid;
+  border-radius: 8px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 32rpx;
+  color: #29b351;
+  font-weight: 500;
+  margin-bottom: 15rpx;
+}
+.site_info_box{
+  padding: 10rpx 20rpx;
+}
+.site_info_box .person_info_box{
+  display: flex;
+  justify-content: space-between;
+  line-height: 36rpx;
+}
+
+.site_info_box .site_info{
+  line-height: 36rpx;
+}
+
+.car_txt{
+  font-size: 36rpx;
+  color: var(--themeColor);
+  font-weight: 600;
+  border-top: 2px var(--themeColor) solid;
+  border-bottom: 2px var(--themeColor) solid;
+  padding: 30rpx;
+}
+
+.goods_item{
+  display: flex;
+  padding: 30rpx 15rpx;
+  border-bottom: 1px #ddd solid;
+}
+
+.goods_item .img_box{
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goods_item .checkbox{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goods_item .info_box{
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 15rpx;
+}
+.goods_item .info{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goods_item .price_num_box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods_item .num_box{
+  display: flex;
+}
+.goods_item .price{
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--themeColor);
+}
+
+.goods_item .minus,.plus{
+  width: 55rpx;
+  height: 55rpx;
+  font-size: 42rpx;
+  text-align: center;
+  line-height: 42rpx;
+  border: 1px #999 solid;
+}
+.goods_item .num{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+  border-top:1px #999 solid;
+  border-bottom:1px #999 solid;
+}
+
+.clearing_box{
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 1px #999 solid;
+
+}
+.clearing_box .checkbox{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clearing_box .total_box{
+  flex: 6;
+  text-align: right;
+  padding-right: 25rpx;
+}
+.total_box .total_inner_box{
+  display: flex;
+  justify-content: flex-end;
+}
+.total_inner_box{
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.total_inner_box .money{
+  color: var(--themeColor);
+}
+.clearing_box .clearing{
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--themeColor);
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 600;
+}

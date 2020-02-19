@@ -1,0 +1,15 @@
+.tabs .header{
+  display: flex;
+}
+
+.tabs .header .tabsItem{
+  flex: 1;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+  text-align: center;
+}
+.tabs .header .active{
+  color: var(--themeColor);
+  border-bottom: 5rpx var(--themeColor) solid;
+}
+

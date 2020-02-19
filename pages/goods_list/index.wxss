@@ -1,0 +1,35 @@
+.synthesize .nav_box{
+  display: flex;
+  border-bottom: 1px #eee solid;
+}
+.synthesize .nav_box .img_box{
+  padding: 5rpx;
+  width: 40%;
+  height: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.synthesize .nav_box .img_box image{
+  width: 80%;
+}
+.synthesize .nav_box .info_box{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 38rpx;
+  /* word-wrap: break-word;
+  word-break: normal; */
+}
+
+.synthesize .nav_box .info_box .describe{
+  /* word-break: break-world; */
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+}
+.synthesize .nav_box .info_box .price{
+  color: var(--themeColor);
+}

@@ -1,0 +1,66 @@
+<view class="cart">
+  <view wx:if="{{!siteInfo.userName}}" class="addsite" bindtap="getSite">+添加收货地址</view>
+  <view class="site_info_box" wx:else>
+    <view class="person_info_box">
+      <view class="name">{{siteInfo.userName}}</view>
+      <view class="phone">{{siteInfo.telNumber}}</view>
+    </view>
+    <view class="site_info">
+    {{siteInfo.provinceName}}
+    {{siteInfo.cityName}}
+    {{siteInfo.cityName}}
+    {{siteInfo.detailInfo}}
+    </view>
+  </view>
+  <view class="car_txt">购物车</view>
+  <view class="goods_list" wx:if="{{carList.length}}">
+    <view class="goods_item"
+    wx:for="{{carList}}"
+    wx:key="goods_id">
+      <checkbox-group
+      class="checkbox"
+      bindchange="handlChange"
+      data-index="{{index}}">
+        <checkbox checked="{{item.check}}"></checkbox>
+      </checkbox-group>
+      <view class="img_box">
+        <image mode="widthFix" src="{{item.goods_big_logo}}" />
+      </view>
+      <view class="info_box">
+        <view class="info">{{item.goods_name}}</view>
+        <view class="price_num_box">
+          <view class="price">￥{{item.goods_price}}</view>
+          <view class="num_box">
+            <view
+            class="minus"
+            bindtap="changeNum"
+            data-index="{{index}}"
+            data-num="{{-1}}">-</view>
+            <view class="num">{{item.num}}</view>
+            <view
+            class="plus"
+            bindtap="changeNum"
+            data-index="{{index}}"
+            data-num="{{1}}">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <image mode="widthFix" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578995839356&di=00fd22dc23605ba00424b7b12c4e3e05&imgtype=0&src=http%3A%2F%2Fm.hua.com%2Fimages%2Fgwc_k.png" />
+  </view>
+  <view class="clearing_box bg_white">
+    <checkbox-group class="checkbox" bindchange="handlAllChange">
+      <checkbox checked="{{checkedAll}}">全选</checkbox>
+    </checkbox-group>
+    <view class="total_box">
+      <view class="total_inner_box">
+        <text class="total_txt">合计:</text>
+        <text class="money">￥{{totalMoney}}</text>
+      </view>
+      <view>包含运费</view>
+    </view>
+    <view class="clearing" bindtap="clearing">结算({{totalNum}})</view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+@import "/styles/iconfont.wxss";
+page,view,scroll-view,swiper,swiper-item,movable-area,movable-view,cover-view,cover-image,icon,text,rich-text,progress,button,checkbox-group,checkbox,form,input,label,picker,picker-view,radio-group,radio,slider,switch,textarea,navigator,functional-page-navigator,image,video,camera,live-player,live-pusher,map,canvas,open-data,web-view,ad{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page{
+  --themeColor: #eb4450;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 38rpx;
+}
+
+image{
+  width: 100%;
+}
+
+.bg_gray{
+ background: #eee;
+}
+.bg_white{
+  background: #fff;
+}
