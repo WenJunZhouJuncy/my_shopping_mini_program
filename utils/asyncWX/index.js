@@ -38,6 +38,34 @@ export const chooseAddress = () => {
     })
   })
 }
+//登录授权
+export const login = () => {
+  return new Promise((resolve, reject) => {
+    wx.login({
+      timeout: 15000,
+      success: (res) => {
+        resolve(res)
+      },
+      fail: err => {
+        reject(err)
+      }
+    })
+  })
+}
+// 发起微信支付
+export const requestPayment = pay => {
+  return new Promise((resolve, reject) => {
+    wx.requestPayment({
+      ...pay,
+      success: (res) => {
+        resolve(res)
+      },
+      fail: (err) => {
+        reject(err)
+      }
+    })
+  })
+}
 // 对话框
 export const showModal = msg => {
   return new Promise((resolve,reject) => {

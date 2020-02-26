@@ -1,1 +1,39 @@
-/* pages/collect/index.wxss */
+.synthesize .nav_box{
+  display: flex;
+  border: 1px #eee solid;
+}
+.synthesize .nav_box .img_box{
+  width: 40%;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.synthesize .nav_box .img_box image{
+  width: 60%;
+}
+.synthesize .nav_box .info_box{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 38rpx;
+}
+
+.synthesize .nav_box .info_box .describe{
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+}
+.synthesize .nav_box .info_box .price{
+  color: var(--themeColor);
+}
+
+.order_warp{
+  width: 80%;
+  margin: 110rpx auto;
+  text-align: center;
+  font-size: 42rpx;
+  color: var(--themeColor);
+}

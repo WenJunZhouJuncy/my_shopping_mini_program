@@ -5,20 +5,21 @@
   display: flex;
 }
 .category .scroll_left{
-  flex: 2;
+  flex: 3;
   white-space: nowrap;
   height: calc(100vh - 90rpx);
+  margin-right: 20rpx;
 }
 .category .scroll_right{
-  flex: 5;
+  flex: 7;
   height: calc(100vh - 90rpx);
 }
 .category .left_content{
   color: #333;
   text-align: center;
   line-height: 72rpx;
-  border-bottom: 1px #999 solid;
-  background: #ddd;
+  border-bottom: 1px #bbb solid;
+  background: #eee;
 }
 .category .left_active{
   background: #fff;

@@ -49,6 +49,10 @@
   padding: 20rpx 0 20rpx 10rpx;
 }
 
+.goods_detail .collect_active{
+  color: var(--themeColor);
+}
+
 .goods_detail .bottom_box{
   width: 100vw;
   position: fixed;

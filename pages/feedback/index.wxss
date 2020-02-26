@@ -1,1 +1,93 @@
-/* pages/feedback/index.wxss */
+.feedback{
+  background-color: #eee;
+  min-height: 100vh;
+}
+.feedback{
+  padding: 20rpx;
+}
+.issue_title{
+  font-size: 32rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+.issue_kind_warp{
+  display: flex;
+  flex-wrap: wrap;
+}
+.issue_kind{
+  width: 30%;
+  background: #fff;
+  font-size: 28rpx;
+  text-align: center;
+  padding: 15rpx 0;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+textarea{
+  width: 100%;
+  height: 280rpx;
+  background: #fff;
+  font-size: 32rpx;
+  padding: 10rpx;
+  margin-top: 40rpx;
+  line-height: 42rpx;
+}
+
+.add_img_warp{
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 10rpx;
+}
+
+.btn_warp,.img_warp{
+  width: 100rpx;
+  margin-right: 35rpx;
+  margin-bottom: 25rpx;
+  position: relative;
+}
+.img_warp{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img_warp icon{
+  position: absolute;
+  right: -20rpx;
+  top: -20rpx;
+  z-index: 100;
+}
+.btn_warp button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100rpx !important;
+  color: #999;
+  font-weight: 600;
+  font-size: 52rpx;
+}
+
+.commit_warp{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 35rpx;
+}
+
+.commit_warp button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background: var(--themeColor);
+  color: #fff;
+  width: 250rpx;
+}
+
+.issue_kind_active{
+  border: 1px solid var(--themeColor);
+  color: var(--themeColor);
+}

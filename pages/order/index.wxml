@@ -1,2 +1,6 @@
-<!--pages/order/index.wxml-->
-<text>pages/order/index.wxml</text>
+<Tabs tabs="{{tabs}}" bindtabsChange="tabsChange">
+  <view class="order_warp">
+    <icon type="info" size="42" color="var(--themeColor)"></icon>
+    <view class="val">暂无相关订单</view>
+  </view>
+</Tabs>

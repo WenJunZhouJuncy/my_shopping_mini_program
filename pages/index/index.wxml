@@ -14,7 +14,7 @@
   </swiper>
 
   <view class="catitems_box">
-    <navigator url="{{item.navigator_url}}" wx:for="{{catitemsList}}" wx:key="name" open-type="{{item.open_type}}">
+    <navigator url="{{item.navigator_url?item.navigator_url:''}}" wx:for="{{catitemsList}}" wx:key="name" open-type="{{item.open_type}}">
       <image mode="widthFix" src="{{item.image_src}}" />
     </navigator>
   </view>

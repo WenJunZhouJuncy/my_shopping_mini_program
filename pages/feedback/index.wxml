@@ -1,2 +1,32 @@
-<!--pages/feedback/index.wxml-->
-<text>pages/feedback/index.wxml</text>
+<Tabs tabs="{{tabs}}" bindtabsChange="tabsChange">
+  <view class="feedback">
+    <block>
+      <view class="issue_title">问题的种类</view>
+      <view class="issue_kind_warp">
+        <view
+        class="issue_kind {{issueKindIndex === index?'issue_kind_active':''}}"
+        wx:for="{{issueKind}}"
+        wx:key="*this"
+        bindtap="handlIssueKind"
+        data-index="{{index}}">
+          {{item}}
+        </view>
+      </view>
+      <textarea value="{{textVal}}" bindinput="handlTextChange" placeholder="请描述您遇到的问题"></textarea>
+      <view class="add_img_warp">
+        <view class="btn_warp">
+          <button bindtap="handlImg">+</button>
+        </view>
+        <block wx:if="{{imgList}}">
+          <view class="img_warp" wx:for="{{imgList}}" wx:key="path">
+            <icon type="clear" color="red" bindtap="handlIcon" data-index="{{index}}"></icon>
+            <image mode="widthFix" src="{{item}}"></image>
+          </view>
+        </block>
+      </view>
+      <view class="commit_warp">
+        <button bindtap="handlCommit"><icon type="success_no_circle" color="#fff"></icon>提交</button>
+      </view>
+    </block>
+  </view>
+</Tabs>

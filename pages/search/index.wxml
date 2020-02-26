@@ -1,2 +1,13 @@
-<!--pages/search/index.wxml-->
-<text>pages/search/index.wxml</text>
+<view class="search">
+  <view class="search_warp">
+    <input placeholder="搜索" value="{{searchValue}}" bindinput="handlInput"></input>
+    <button wx:if="{{searchValue}}" bindtap="handlButton">取消</button>
+  </view>
+  <view class="search_val_warp">
+    <navigator
+    url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+    class="search_val"
+    wx:for="{{searchList}}"
+    wx:key="goods_id">{{item.goods_name}}</navigator>
+  </view>
+</view>

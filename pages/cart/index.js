@@ -57,9 +57,7 @@ Page({
   handlChange(e){
     let index = e.currentTarget.dataset.index;
     let {carList} = this.data
-    console.log(carList === this.data.carList)
     carList[index].check = !carList[index].check;
-    console.log(carList , this.data.carList)
     this.data.carList = true
     wx.setStorageSync('CarData',carList);
     this.getCarData()

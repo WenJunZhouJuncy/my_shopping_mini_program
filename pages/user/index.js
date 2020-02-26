@@ -1,66 +1,57 @@
 // pages/user/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    userInfo:null,
+    collectNum: 0, //收藏数量
+    historyNum:0, //浏览数量
+    orderList: [
+      {icon:'icon-dingdan',txt:'全部订单'},
+      {icon:'icon-daifukuan',txt:'待付款'},
+      {icon:'icon-daishouhuo',txt:'待收货'},
+      {icon:'icon-refund',txt:'退货/退款'}
+    ],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  //登录获取用户信息
+  getUserInfo(){
+    let userInfo = wx.getStorageSync('UserInfo');
+    this.setData({
+      userInfo
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 获取收藏数量
+  getCollect(){
+    let collectList = wx.getStorageSync('Collect') || [];
+    let collectNum = collectList.length;
+    this.setData({
+      collectNum
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 获取浏览历史
+  getHistory(){
+    let historyList = wx.getStorageSync('History') || [];
+    let historyNum = historyList.length;
+    this.setData({
+      historyNum
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  //跳转订单页面
+  handlOrderAll(e){
+    let token = wx.getStorageSync('token')
+    let {index} = e.currentTarget.dataset;
+    // token是否存在
+    // if(!token){
+    //   wx.navigateTo({
+    //     url: '/pages/auth/index',
+    //   })
+    //   return;
+    // }
+    wx.navigateTo({
+      url: '/pages/order/index?type=' + (index+1),
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShow(){
+    this.getUserInfo()
+    this.getCollect()
+    this.getHistory()
   }
 })

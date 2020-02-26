@@ -1,1 +1,119 @@
-/* pages/user/index.wxss */
+
+.mg_btm40{
+  margin-bottom: 30rpx;
+}
+.user{
+  background-color: #edece8;
+}
+
+.user_warp{
+  width: 100%;
+  height: 500rpx;
+  position: relative;
+  background-color: var(--themeColor);
+}
+.login{
+  color: #3fff9c;
+  font-size: 40rpx;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 30rpx 60rpx;
+  border: 1px #3fff9c solid;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+}
+
+.user_info_warp{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+.dim_img{
+  position: absolute;
+  top: -25%;
+  filter: blur(10rpx); 
+}
+
+.info_warp{
+  width: 180rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25%;
+}
+
+.head_img{
+  width: 100%;
+  height: 180rpx;
+  border-radius: 50%;
+}
+
+.info{
+  font-size: 40rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.personal_info{
+  padding: 0 30rpx;
+  position: relative;
+  top: -40rpx;
+}
+.collect_warp{
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.collect_item{
+  padding: 20rpx 0;
+}
+
+.collect_warp .num{
+  color: var(--themeColor);
+}
+
+.collect_warp .txt{
+  font-size: 32rpx;
+}
+
+.order_warp{
+  font-size: 32rpx;
+}
+.iconfont{
+  color: var(--themeColor);
+  font-size: 46rpx;
+}
+.order_title{
+  padding: 30rpx;
+  border-bottom: 1px #eee solid;
+}
+.order_box{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  text-align: center;
+}
+
+.order_inner_box{
+  padding: 30rpx 20rpx; 
+}
+
+.site_warp{
+  padding: 30rpx;
+  font-size: 32rpx;
+}
+.service_warp{
+  display: flex;
+  justify-content: space-between;
+}
+.service_warp,.idea,.us,.recommend{
+  font-size: 32rpx;
+  padding: 30rpx;
+}
+.service_warp,.idea{
+  border-bottom: 1px #eee solid;
+}

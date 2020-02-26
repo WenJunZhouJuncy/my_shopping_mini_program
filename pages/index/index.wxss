@@ -5,7 +5,7 @@
 
 .home .catitems_box{
   display: flex;
-  background: #eee;
+  background: #fff4ed;
   border-radius: 8rpx;
 }
 

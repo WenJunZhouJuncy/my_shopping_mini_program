@@ -1,7 +1,7 @@
 <view class="goods_list">
   <SearchInput></SearchInput>
   <Tabs tabs="{{tabs}}" bindtabsChange="tabsChange">
-    <block wx:if="{{tabs[0].isActive}}">
+    <block>
       <view class="synthesize">
         <navigator
         class="nav_box"
@@ -19,7 +19,5 @@
         </navigator>
       </view>
     </block>
-    <block wx:if="{{tabs[1].isActive}}">1</block>
-    <block wx:if="{{tabs[2].isActive}}">2</block>
   </Tabs>
 </view>

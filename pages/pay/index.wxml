@@ -33,6 +33,6 @@
       <view class="todle">合计:<text class="money">￥{{totalMoney}}</text></view>
       <view>包含运费</view>
     </view>
-    <view class="payment">支付({{totalNum}})</view>
+    <view class="payment" bindtap="handlPay">支付({{totalNum}})</view>
   </view>
 </view>

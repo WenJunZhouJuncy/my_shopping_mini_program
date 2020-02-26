@@ -1,66 +1,53 @@
-// pages/collect/index.js
+import {showToast} from "../../utils/asyncWX/index"
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    collectList:[],     //收藏商品
+    historyList:[],     //我的足迹
+    tabs:[
+      {id: 0,value: '收藏的店铺', isActive: true},
+      {id: 1,value: '收藏的品牌',isActive: false},
+      {id: 2,value: '收藏的商品',isActive: false},
+      {id: 3,value: '我的足迹',isActive: false}
+    ],
+    tabsIndex:0,
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  
+  // tabs切换
+  tabsChange(e){
+    let index = e.detail.index;
+    let {tabs} = this.data;
+    tabs.forEach((e,i) => {i=== index? e.isActive = true : e.isActive = false});
+    this.setData({
+      tabs
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 根据条件高亮Tabs
+  handlTabsIndex(index){
+    let {tabs} = this.data;
+    tabs.forEach((e,i) => { i == index? e.isActive = true : e.isActive = false});
+    this.setData({
+      tabs
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 获取收藏
+  getCollect(){
+    let collectList = wx.getStorageSync('Collect') || [];
+    this.setData({
+      collectList
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  // 获取浏览历史
+  getHistory(){
+    let historyList = wx.getStorageSync('History') || [];
+    this.setData({
+      historyList
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShow(){
+    let pages = getCurrentPages();
+    let {index} = pages[pages.length - 1].options;
+    this.getCollect()
+    this.getHistory()
+    this.handlTabsIndex(index)
   }
 })

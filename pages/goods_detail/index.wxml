@@ -22,9 +22,9 @@
     <view class="goods_name_box">
       {{goodsDetailMsg.goods_name}}
     </view>
-    <view class="collect_box">
-      <view class="iconfont icon-wujiaoxingkong"></view>
-      <view class="collect_txt">收藏</view>
+    <view class="collect_box {{collect?'collect_active':''}}" bindtap="handlCollect">
+      <view class="iconfont icon-wujiaoxing"></view>
+      <view class="collect_txt">{{collect?'已收藏':'收藏'}}</view>
     </view>
   </view>
   <!-- 图文详情 -->
@@ -49,6 +49,6 @@
       <view>购物车</view>
     </navigator>
     <view class="two join_car" bindtap="joinCar">加入购物车</view>
-    <view class="two now_buy">立即购买</view>
+    <view class="two now_buy" bindtap="nowBuy">立即购买</view>
   </view>
 </view>

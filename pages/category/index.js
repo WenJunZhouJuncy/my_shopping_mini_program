@@ -1,4 +1,4 @@
-import {request} from '../../request/index.js'
+import {request} from '../../request/index.js'  //{url: app.apiUrl.key}
 import regeneratorRuntime from '../../lib/runtime/runtime.js';
 let app = getApp()
 Page({

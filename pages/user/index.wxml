@@ -1,2 +1,56 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<view class="user">
+ <view class="user_warp">
+  <view wx:if="{{userInfo.avatarUrl}}" class="user_info_warp">
+    <image class="dim_img" mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+    <view class="info_warp">
+      <image class="head_img" mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+      <view class="info">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <navigator wx:else open-type="navigate" url="/pages/login/index" class="login">登录</navigator>
+ </view>
+ <view class="personal_info">
+  <view class="collect_warp bg_white mg_btm40">
+    <navigator class="collect_item" url="/pages/collect/index?index=0">
+      <view class="num">0</view>
+      <view class="txt">收藏的店铺</view>
+    </navigator>
+    <navigator class="collect_item" url="/pages/collect/index?index=1">
+      <view class="num">0</view>
+      <view class="txt">收藏的品牌</view>
+    </navigator>
+    <navigator class="collect_item" url="/pages/collect/index?index=2">
+      <view class="num">{{collectNum}}</view>
+      <view class="txt">收藏的商品</view>
+    </navigator>
+    <navigator class="collect_item" url="/pages/collect/index?index=3">
+      <view class="num">{{historyNum}}</view>
+      <view class="txt">我的足迹</view>
+    </navigator>
+  </view>
+  <view class="order_warp bg_white mg_btm40">
+    <view class="order_title">我的订单</view>
+    <view class="order_box">
+      <view
+      class="order_inner_box"
+      wx:for="{{orderList}}"
+      wx:key="*this"
+      bindtap="handlOrderAll"
+      data-index="{{index}}">
+        <view class="iconfont {{item.icon}}"></view>
+        <view style="margin-top:5rpx">{{item.txt}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="site_warp bg_white mg_btm40">收货地址管理</view>
+  <view class="with_warp bg_white mg_btm40">
+    <view class="service_warp">
+      <view>联系客服</view>
+      <view>400-618-4000</view>
+    </view>
+    <navigator class="idea" url="/pages/feedback/index">意见反馈</navigator>
+    <view class="us">关于我们</view>
+  </view>
+  <view class="recommend bg_white">把应用推荐给他人</view>
+ </view>
+</view>

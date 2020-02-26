@@ -17,7 +17,8 @@
       wx:for="{{rigthClassList}}"
       wx:for-item="item1"
       wx:for-index="index1"
-      wx:key="cat_id">
+      wx:key="cat_id"
+      >
         <view class="title">★{{item1.cat_name}}★</view>
         <view class="right_classify">
           <navigator
