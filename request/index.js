@@ -1,7 +1,7 @@
 
 let requestNum = 0;
 export const request = (params)=>{
-  let baseUrl = "https://api.zbztb.cn/api/public/v1";
+  let baseUrl = "https://api-hmugo-web.itheima.net/api/public/v1";
   requestNum++;
   let header = {...params.header};
   if(params.url.includes('/my/')){
